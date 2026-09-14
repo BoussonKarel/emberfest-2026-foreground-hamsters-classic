@@ -2,12 +2,16 @@
 
 const funnel = require('broccoli-funnel');
 const replace = require('broccoli-string-replace');
+const { WatchedDir } = require('broccoli-source');
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 const isDevelopment = EmberApp.env() === 'development';
 
 const packageJson = require('./package.json');
+const {
+  BuildChromeScripts,
+} = require('./broccoli-plugins/build-chrome-scripts');
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
@@ -54,7 +58,8 @@ module.exports = function (defaults) {
           },
         ],
       }),
-      funnel('chrome-extension', { files: ['background.js', 'hamsters.js'] }),
+      // Compile the Chrome scripts to JS:
+      new BuildChromeScripts([new WatchedDir('chrome-scripts')]),
     ],
   });
 };
