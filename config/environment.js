@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'classic-hamster-wacking',
     environment,
     rootURL: '/',
-    locationType: 'history',
+    locationType: 'hash',
     EmberENV: {
       EXTEND_PROTOTYPES: false,
       FEATURES: {
