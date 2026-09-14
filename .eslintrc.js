@@ -26,6 +26,19 @@ module.exports = {
       ],
       rules: {},
     },
+    // gts files
+    {
+      files: ['**/*.gts'],
+      parser: 'ember-eslint-parser',
+      processor: 'ember/noop',
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      rules: {
+        'ember/template-no-let-reference': 'error',
+      },
+    },
     // node files
     {
       files: [
@@ -50,6 +63,15 @@ module.exports = {
       // test files
       files: ['tests/**/*-test.{js,ts}'],
       extends: ['plugin:qunit/recommended'],
+    },
+    {
+      // extension scripts and anything touching the chrome.* APIs
+      files: [
+        'public/content-scripts/**/*.js',
+        'public/background/**/*.js',
+        'app/components/scoreboard.gts',
+      ],
+      globals: { chrome: 'readonly' },
     },
   ],
 };
