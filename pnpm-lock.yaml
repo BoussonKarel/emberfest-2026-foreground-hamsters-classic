@@ -140,6 +140,12 @@ importers:
       broccoli-asset-rev:
         specifier: ^3.0.0
         version: 3.0.0(supports-color@8.1.1)
+      broccoli-funnel:
+        specifier: ^3.0.8
+        version: 3.0.8(supports-color@8.1.1)
+      broccoli-string-replace:
+        specifier: ^0.1.2
+        version: 0.1.2(supports-color@8.1.1)
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2

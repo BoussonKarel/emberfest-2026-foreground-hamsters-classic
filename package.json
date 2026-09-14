@@ -70,6 +70,8 @@
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "broccoli-asset-rev": "^3.0.0",
+    "broccoli-funnel": "^3.0.8",
+    "broccoli-string-replace": "^0.1.2",
     "concurrently": "^8.2.2",
     "ember-auto-import": "^2.8.1",
     "ember-cli": "~5.12.0",
