@@ -9,6 +9,7 @@
       "classic-hamster-wacking/tests/*": ["tests/*"],
       "classic-hamster-wacking/*": ["app/*"],
       "*": ["types/*"]
-    }
+    },
+    "types": ["chrome"]
   }
 }

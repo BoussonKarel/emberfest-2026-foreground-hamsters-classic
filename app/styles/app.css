@@ -1,1 +1,45 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+body {
+  min-width: 300px;
+  min-height: 100px;
+  margin: 0;
+  padding: 1.5rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: #fdf6e3;
+  color: #3a2e26;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.scoreboard-score {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.scoreboard-count {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.scoreboard-reset {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  color: #fff;
+  cursor: pointer;
+  background: #d97706;
+  border: none;
+  border-radius: 6px;
+}
+
+.scoreboard-reset:hover {
+  background: #b45309;
+}
